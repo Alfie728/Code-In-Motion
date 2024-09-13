@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 const ShinyButton = () => {
   return (
     <motion.button
-      className={`px-6 py-2 rounded-md relative ${styles.radialGradient}`}
+      className={`relative rounded-md px-12 py-6 ${styles.radialGradient}`}
       // @ts-ignore
       initial={{ "--x": "-100%", scale: 1 }}
       // @ts-ignore
@@ -28,12 +28,12 @@ const ShinyButton = () => {
       }}
     >
       <span
-        className={`text-neutral-100 tracking-wide font-light h-full w-full block relative ${styles.linearMask}`}
+        className={`relative block h-full w-full text-2xl font-medium tracking-wide text-neutral-100 ${styles.linearMask}`}
       >
         Start now
       </span>
       <span
-        className={`block absolute inset-0 rounded-md p-px ${styles.linearOverlay}`}
+        className={`absolute inset-0 block rounded-md p-px ${styles.linearOverlay}`}
       />
     </motion.button>
   );
