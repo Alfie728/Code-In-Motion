@@ -26,6 +26,11 @@ const config: Config = {
             clipPath: "inset(0 0 0 0)",
           },
         },
+        pulse: {
+          "50%": {
+            opacity: "0.5",
+          },
+        },
       },
     },
   },
