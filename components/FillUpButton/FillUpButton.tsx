@@ -4,7 +4,7 @@ const FillUpButton = () => {
       href="#"
       draggable="false"
       aria-labelledby="title"
-      className="group relative flex max-w-fit items-center justify-center rounded-lg border-2 border-indigo-600 px-12 py-6 text-indigo-600"
+      className="group relative flex max-w-fit items-center justify-center rounded-lg border-2 border-indigo-600 bg-white px-12 py-6 text-indigo-600"
     >
       <span
         id="title"

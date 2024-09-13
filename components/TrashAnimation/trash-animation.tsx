@@ -29,7 +29,7 @@ export function TrashAnimation() {
 
   return (
     <MotionConfig transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}>
-      <div className="relative w-[400px] h-[400px] flex flex-col items-center justify-center">
+      <div className="relative flex h-[400px] w-[400px] flex-col items-center justify-center">
         <ul className="grid grid-cols-2 gap-4">
           <AnimatePresence>
             {!readyToRemove &&
@@ -47,12 +47,12 @@ export function TrashAnimation() {
                           }
                     }
                     key={image}
-                    className="relative flex h-[100px] w-[100px]"
+                    className="relative flex h-[150px] w-[150px]"
                   >
                     <motion.div
                       exit={{ opacity: 0, transition: { duration: 0.1 } }}
                       className={clsx(
-                        "pointer-events-none absolute right-2 top-2 flex h-4 w-4 items-center justify-center rounded-full border border-white/60"
+                        "pointer-events-none absolute right-2 top-2 flex h-4 w-4 items-center justify-center rounded-full border border-white/60",
                       )}
                     >
                       {isSelected ? (
@@ -80,7 +80,7 @@ export function TrashAnimation() {
                       onClick={() => {
                         if (isSelected) {
                           setImagesToRemove((images) =>
-                            images.filter((img) => img !== image)
+                            images.filter((img) => img !== image),
                           );
                         } else {
                           setImagesToRemove((images) => [...images, image]);
@@ -92,8 +92,9 @@ export function TrashAnimation() {
                         className="rounded-xl"
                         alt="A guy"
                         src={`https://animations-on-the-web-git-how-i-use-3066e1-emilkowalski-s-team.vercel.app/how-i-use-framer-motion/why-framer-motion/${image}.webp`}
-                        height={100}
-                        width={100}
+                        height={150}
+                        width={150}
+                        draggable="false"
                       />
                     </button>
                   </motion.li>
@@ -113,7 +114,7 @@ export function TrashAnimation() {
                 bounce: 0,
                 duration: 0.3,
               }}
-              className="absolute bottom-8 flex gap-1 rounded-xl p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_8px_8px_-8px_rgba(0,0,0,0.16)] will-change-transform"
+              className="absolute -bottom-6 flex gap-1 rounded-xl p-1 shadow-[0_0_0_1px_rgba(0,0,0,0.08),0px_8px_8px_-8px_rgba(0,0,0,0.16)] will-change-transform"
             >
               <div className="flex w-full justify-between gap-1">
                 <button className="flex w-12 flex-col items-center gap-[1px] rounded-lg bg-[#F9F9F8] pb-1 pt-[6px] text-[10px] font-medium text-[#8D8D86]">
@@ -238,6 +239,7 @@ export function TrashAnimation() {
                       src={`https://animations-on-the-web-git-how-i-use-3066e1-emilkowalski-s-team.vercel.app/how-i-use-framer-motion/why-framer-motion/${image}.webp`}
                       height={65}
                       width={65}
+                      draggable="false"
                       style={{
                         rotate:
                           index % 2 === 0

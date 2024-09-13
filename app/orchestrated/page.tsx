@@ -3,6 +3,7 @@ import TiltParallax from "@/components/TiltParallax";
 import { TrashAnimation } from "../../components/TrashAnimation/trash-animation";
 import MultiStepForm from "@/components/MultiStepForm/MultiStepForm";
 import FeedbackPopover from "@/components/FeedbackPopover/FeedbackPopover";
+import AppStoreCard from "@/components/AppStoreCard";
 
 export default function TrashAnimationPage() {
   return (
@@ -15,11 +16,14 @@ export default function TrashAnimationPage() {
         <div className="flex items-center justify-center overflow-hidden rounded-lg border border-gray-200 p-8">
           <MultiStepForm />
         </div>
+        <div className="flex flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 p-8">
+          <TrashAnimation />
+        </div>
         <div className="flex min-h-[600px] items-center justify-center overflow-hidden rounded-lg border border-gray-200 p-8">
           <TiltParallax />
         </div>
-        <div className="flex flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 p-8">
-          <TrashAnimation />
+        <div className="flex items-center justify-center overflow-hidden rounded-lg border border-gray-200">
+          <AppStoreCard />
         </div>
       </div>
     </div>
