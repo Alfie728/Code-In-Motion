@@ -16,13 +16,13 @@ const ThemeSwitch = () => {
   // }, []);
 
   return (
-    <div className="relative overflow-hidden md:rounded-t-xl md:h-[216px] rounded-xl">
+    <div className="relative overflow-hidden rounded-xl md:h-[216px] md:rounded-t-xl">
       {/* Light theme */}
       <div
         className={`absolute inset-0 flex transform flex-col items-start justify-start gap-4 !rounded-b-none bg-white p-6 md:rounded-xl ${
           isDark
             ? ""
-            : "animate-[revealClipPath_1s_cubic-bezier(0.77,0,0.175,1)] z-10"
+            : "z-10 animate-[revealClipPath_1s_cubic-bezier(0.77,0,0.175,1)]"
         }`}
       >
         <span className="font-medium text-black">
