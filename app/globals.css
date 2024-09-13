@@ -1,6 +1,12 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
 
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);

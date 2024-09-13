@@ -14,6 +14,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        sans: ["Satoshi", "sans-serif"],
+      },
       keyframes: {
         revealClipPath: {
           from: {
@@ -27,13 +30,13 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(function({ addUtilities }) {
+    plugin(function ({ addUtilities }) {
       addUtilities({
-        '.transform-style-3d': {
-          'transform-style': 'preserve-3d',
+        ".transform-style-3d": {
+          "transform-style": "preserve-3d",
         },
-      })
-    })
+      });
+    }),
   ],
 };
 
